@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <org.webrtc.SurfaceViewRenderer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/remoteView"/>
+
+    <org.webrtc.SurfaceViewRenderer
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:id="@+id/localView"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/controlPanelLayout"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/faded_black"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/titleLayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:id="@+id/callTimerTv"
+            android:text="00:01"
+            app:drawableStartCompat="@drawable/ic_record" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:id="@+id/callTitleTv"
+            android:text="Video Call With Masoud"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/faded_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/controlPanelLayout">
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/endCallButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_end_call"/>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/toggleMicrophoneButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_mic_off"/>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/toggleCameraButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_camera_off"/>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/switchCameraButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_switch_camera"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/toggleAudioDevice"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_ear"/>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/screenShareButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_screen_share"/>
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
