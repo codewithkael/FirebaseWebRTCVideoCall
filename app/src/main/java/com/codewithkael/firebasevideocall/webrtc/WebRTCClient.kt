@@ -237,6 +237,7 @@ class WebRTCClient @Inject constructor(
             }?:throw IllegalStateException()
         }
     private fun stopCapturingCamera(){
+
         videoCapturer.dispose()
         localVideoTrack?.removeSink(localSurfaceView)
         localSurfaceView.clearImage()
