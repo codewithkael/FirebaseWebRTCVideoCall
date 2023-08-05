@@ -34,7 +34,8 @@
         <activity android:name=".ui.CloseActivity"
             android:exported="true"/>
         <receiver android:name=".service.MainServiceReceiver"/>
-        <service android:name=".service.MainService"/>
+        <service android:name=".service.MainService"
+            android:foregroundServiceType="mediaProjection"/>
     </application>
 
 </manifest>
